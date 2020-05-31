@@ -1,16 +1,16 @@
-Name,Price,Second-hand,Listing date
-realme XT,7090,6300,2019/10
-realme 5 Pro,6300,Nan,2019/11
-realme 5 128GB,4990,4500,2019/11
-realme 5 32GB,4050,3745,2019/11
-realme 3 Pro 128GB,5800,Nan,2019/06
-realme 3 Pro 64GB,5600,Nan,2019/06
-realme X2 Pro,Nan,Nan,2019/06
-realme X2 Pro 大師版,Nan,Nan,2019/06
-realme 3,4800,Nan,2019/05
-realme X50 Pro 5G,Nan,Nan,2019/05
-realme 6 Pro,Nan,Nan,2019/05
-realme X50 5G,Nan,Nan,2019/05
-realme 5i,Nan,Nan,2019/05
-realme X2,Nan,Nan,2019/05
-realme X (4GB/64GB),Nan,Nan,2019/05
+Name,Price,Second-hand,Listing date,Month
+realme XT,7090.0,6300.0,2019/10,7
+realme 5 Pro,6300.0,,2019/11,6
+realme 5 128GB,4990.0,4500.0,2019/11,6
+realme 5 32GB,4050.0,3745.0,2019/11,6
+realme 3 Pro 128GB,5800.0,,2019/06,11
+realme 3 Pro 64GB,5600.0,,2019/06,11
+realme X2 Pro,,,2019/06,11
+realme X2 Pro 大師版,,,2019/06,11
+realme 3,4800.0,,2019/05,12
+realme 6 Pro,,,2019/05,12
+realme X50 Pro 5G,,,2019/05,12
+realme X50 5G,,,2019/05,12
+realme X2,,,2019/05,12
+realme 5i,,,2019/05,12
+realme X (4GB/64GB),,,2019/05,12

@@ -1,20 +1,20 @@
-Name,Price,Second-hand,Listing date
-Sony Xperia 10 II,10700,Nan,2020/05
-Sony Xperia 1,21200,15500,2019/06
-Sony Xperia 5,18800,Nan,2019/10
-Sony Xperia XZ3,14600,Nan,2018/10
-Sony Xperia L3,3900,Nan,2019/03
-Sony Xperia 1 II,Nan,Nan,2019/03
-Sony Xperia PRO,Nan,Nan,2019/03
-Sony Xperia L4,Nan,Nan,2019/03
-Sony Xperia XZ Premium,24900,Nan,2017/06
-Sony Xperia XZ1,20900,Nan,2017/09
-Sony Xperia XZ,22900,Nan,2016/09
-Sony Xperia XZ2,24990,Nan,2018/03
-Sony Xperia Z5,22900,Nan,2015/10
-Sony Xperia 10 Plus,11990,Nan,2019/03
-Sony Xperia XZ2 Compact,Nan,Nan,2019/03
-Sony Xperia Ace,Nan,Nan,2019/03
-Sony Xperia Z4,Nan,Nan,2019/03
-Sony Xperia A4 SO-04G,Nan,Nan,2019/03
-Sony Xperia A2 SO-04F,Nan,Nan,2019/03
+Name,Price,Second-hand,Listing date,Month
+Sony Xperia 10 II,10290.0,,2020/05,0
+Sony Xperia 1,21200.0,15500.0,2019/06,11
+Sony Xperia 5,18800.0,,2019/10,7
+Sony Xperia XZ3,14600.0,,2018/10,19
+Sony Xperia L3,3900.0,,2019/03,14
+Sony Xperia 1 II,,,2019/03,14
+Sony Xperia PRO,,,2019/03,14
+Sony Xperia L4,,,2019/03,14
+Sony Xperia XZ Premium,24900.0,,2017/06,35
+Sony Xperia XZ1,20900.0,,2017/09,32
+Sony Xperia XZ,22900.0,,2016/09,44
+Sony Xperia XZ2,24990.0,,2018/03,26
+Sony Xperia Z5,22900.0,,2015/10,55
+Sony Xperia 10 Plus,11990.0,,2019/03,14
+Sony Xperia XZ2 Compact,,,2019/03,14
+Sony Xperia Ace,,,2019/03,14
+Sony Xperia Z4,,,2019/03,14
+Sony Xperia A4 SO-04G,,,2019/03,14
+Sony Xperia A2 SO-04F,,,2019/03,14
