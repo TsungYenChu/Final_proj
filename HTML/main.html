@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<nav class="menu">
+        
+    <div class="menu-logo"><a>手機比較</a></div>
+    <ul id="menuUl" class="active">
+        <li class="current-active"><a class="word" href="./main.html">首頁</a></li>
+        <li><a class="word" href="./time.html">上市日</a></li>
+        <li><a class="word" href="./price.html">空機價</a></li>
+        <li><a class="word" href="./score.html">晶片綜合性能</a></li>
+    </ul>
+</nav>
+
+<body>
+	<span class= "right">
+	<a class="word">資料更新於2020/06/20</a>
+	<div>
+	<select onChange="renew(this.selectedIndex);" class="select-css">
+		<option disabled=disabled selected=selected>選取排序依據</option>
+		<option disabled=disabled>依上市日</option>
+		<option class="bar_word">-----上市一年內--------</option>
+		<option class="bar_word">-----上市超過一年-----</option>
+		<option disabled=disabled>依空機價</option>
+		<option class="bar_word">-----價格由高至低-----</option>
+		<option class="bar_word">-----價格由低至高-----</option>
+		<option disabled=disabled>依晶片綜合性能</option>
+		<option class="bar_word">-----性能由強至弱-----</option>
+		
+	</select>
+	
+	
+	<select id="label" class="select-css">
+		<option value="0" disabled=disabled selected=selected>請先選取選取排序方式</option>
+	</select>
+	</div>
+	<br>
+	<input type="button" value="瀏覽所選取的資料" onclick="TheWikiIntro()"  class= "go">
+	
+	
+	</span>
+	<script>
+		price=new Array();
+
+		price[2]=["-----7999以下--------", "-----8000~19999-----", "-----20000以上-----"];
+		price[3]=["-----7999以下--------", "-----8000~19999-----", "-----20000以上-----"];
+		price[5]=["-----7999以下--------", "-----8000~19999-----", "-----20000以上-----"];
+		price[6]=["-----7999以下--------", "-----8000~19999-----", "-----20000以上-----"];
+		price[8]=["-----7999以下--------", "-----8000~19999-----", "-----20000以上-----"];
+		//另用一個陣列記取上方price對應的value
+		pricelink=new Array();
+
+		pricelink[2]=["month_low_in.html","month_medium_in.html","month_high_in.html"];
+		pricelink[3]=["month_low_out.html","month_medium_out.html","month_high_out.html"];
+		pricelink[5]=["price_low_decending.html","price_medium_decending.html","price_high_decending.html"];
+		pricelink[6]=["price_low_ascending.html","price_medium_ascending.html","price_high_ascending.html"];
+		pricelink[8]=["score_low_decending.html","score_medium_decending.html","score_high_decending.html"];
+
+		function renew(index){
+			for(var i=0;i<price[index].length;i++)
+				//新增select的選項
+				label.options[i]=new Option(price[index][i], "./"+pricelink[index][i]);
+			/*參考網站中筆者表示下面這行是為了「刪除多餘的選項」
+			然而我將之註解掉也可以正常執行，所以有沒有加這行的必要，個人還在理解中...*/
+			label.length=price[index].length;
+		}
+		function TheWikiIntro(){
+			if(label.options[label.selectedIndex].value=="0"){
+			}else{
+				window.open(label.options[label.selectedIndex].value);
+			}
+		}
+	</script>
+
+	
+</div></body>
+<style type="text/css">
+	.menu {
+	    width: 100%;
+	    display: flex;
+	    background: #272626;
+	    border-radius: 4px 4px 4px 4px;
+	    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+	    font-family: sans-serif;
+	}
+
+	.menu li {
+	    float: left;
+	    list-style: none;
+	    margin: 0px 50px 0px 0px;
+	    font-size: 16px;
+	    font-family: sans-serif;
+
+	}
+
+	.menu li a {
+	    text-decoration: none;
+	    color: rgb(146, 151, 150);
+	    transition: color linear 0.15s;
+	    cursor: pointer;
+	    
+	}
+
+	.menu .menu-logo {
+	    margin: auto;
+	    margin-left: 0px;
+	    padding: 10px 10px 10px 20px;
+	    display: block;
+		font-family: sans-serif;
+		font-size:20px;
+	}
+
+	.menu .menu-logo a {
+	    color: #fff;
+	}
+
+	.menu a:hover, .menu .current-active a {
+	    text-decoration: none;
+	    color: #337275;
+	    display: block;
+		font-family: sans-serif;
+		font-size:20px;
+	}
+
+	.word{
+		display: block;
+		font-family: sans-serif;
+		font-size:20px;
+	}
+	.right{
+		position: absolute;
+		top:20%;
+		left: 45%;
+		
+
+	}
+	.custom-select{
+		/*移除箭頭樣式*/
+		appearance:none;
+		-moz-appearance:none;
+		-webkit-appearance:none;
+
+		/*改變右邊箭頭樣式*/
+		background: url("arrow.png") no-repeat right center transparent;
+
+		border:0px;
+		width:100%;
+		height:34px;
+		padding-left:2px;
+		padding-right:40px;
+		background-color:#F6F7F7;
+		color:black;
+	}
+	/* class applies to select element itself, not a wrapper element */
+	.select-css {
+	    display: block;
+	    font-size: 16px;
+	    font-family: sans-serif;
+	    font-weight: 700;
+	    color: #444;
+	    line-height: 1.3;
+	    padding: .6em 1.4em .5em .8em;
+	    width: 100%;
+	    max-width: 100%; /* useful when width is set to anything other than 100% */
+	    box-sizing: border-box;
+	    margin: 0;
+	    border: 1px solid #aaa;
+	    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	    border-radius: .5em;
+	    -moz-appearance: none;
+	    -webkit-appearance: none;
+	    appearance: none;
+	    background-color: #fff;
+	    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+	        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+	        
+	    */
+	    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	    background-repeat: no-repeat, repeat;
+	    /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+	    background-position: right .7em top 50%, 0 0;
+	    /* icon size, then gradient */
+	    background-size: .65em auto, 100%;
+	}
+	/* Hide arrow icon in IE browsers */
+	.select-css::-ms-expand {
+	    display: none;
+	}
+	/* Hover style */
+	.select-css:hover {
+	    border-color: #888;
+	}
+	/* Focus style */
+	.select-css:focus {
+	    border-color: #aaa;
+	    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+	    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	    box-shadow: 0 0 0 3px -moz-mac-focusring;
+	    color: #222; 
+	    outline: none;
+	}
+
+	/* Set options to normal weight */
+	.select-css option {
+	    font-weight:normal;
+	}
+
+	/* Support for rtl text, explicit support for Arabic and Hebrew */
+	*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
+	    background-position: left .7em top 50%, 0 0;
+	    padding: .6em .8em .5em 1.4em;
+	}
+
+	/* Disabled styles */
+	.select-css:disabled, .select-css[aria-disabled=true] {
+	    color: graytext;
+	    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	}
+
+	.select-css:disabled:hover, .select-css[aria-disabled=true] {
+	    border-color: #aaa;
+	}
+	.bar_word{
+		position: relative;
+		left: 50%;
+	}
+	.go{
+		position: relative;
+		left: 15%;
+		font-size:16px;border-radius: 12px;color: black;
+		background-color: #e7e7e7;
+	.go:hover {
+		border-radius: 12px	
+	 	background-color: #e7e7e7; 
+	 	color: gray;
+	}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	document.getElementById('menubtn').addEventListener('click', function (e) {
+       $(this).toggleClass('active');
+       $('#menuUl').toggleClass('active');
+   })
+
+   $('#menuUl li').click(function () {
+       $(this).parent().find('li').each(function () {
+           if ($(this).hasClass('current-active')) {
+               $(this).toggleClass('current-active');
+           }
+       })
+       $(this).toggleClass('current-active');
+   })
+
+	
+</script>
+</html>
